@@ -65,12 +65,14 @@
                 setTimeout(function () {
                     $('.sl_02').slick('unslick');
                 },300);
+                $(this).find('.title__ico').removeClass('title__ico_active');
 			}else{
-			$('#slider_hide').show('slow');
-			$('.sl_02').slick({
-			dots: true,
-			speed: 300,
-    	});
+				$('#slider_hide').show('slow');
+                $('.sl_02').slick({
+                    dots: true,
+                    speed: 300,
+                });
+                $(this).find('.title__ico').addClass('title__ico_active');
 			}
 		});
 		$('#title_02').click(function() {
@@ -79,26 +81,30 @@
                 setTimeout(function () {
                     $('.sl_03').slick('unslick');
                 },300);
+                $(this).find('.title__ico').removeClass('title__ico_active');
 			}else{
-			$('#slider_hide_02').show('slow');
-			$('.sl_03').slick({
-			dots: true,
-			speed: 300,
-    	});
+				$('#slider_hide_02').show('slow');
+				$('.sl_03').slick({
+					dots: true,
+					speed: 300,
+				});
+                $(this).find('.title__ico').addClass('title__ico_active');
 			}
 		});
 		$('#title_03').click(function() {
 			if($('#slider_hide_03').is(':visible')){
 				$('#slider_hide_03').hide('slow');
+                $(this).find('.title__ico').removeClass('title__ico_active');
                 setTimeout(function () {
                     $('.sl_04').slick('unslick');
                 },300);
 			}else{
-			$('#slider_hide_03').show('slow');
-			$('.sl_04').slick({
-			dots: true,
-			speed: 300,
-    	});
+				$('#slider_hide_03').show('slow');
+				$('.sl_04').slick({
+					dots: true,
+					speed: 300,
+				});
+                $(this).find('.title__ico').addClass('title__ico_active');
 			}
 		});
 		$('#title_04').click(function() {
@@ -107,12 +113,14 @@
                 setTimeout(function () {
                     $('.sl_05').slick('unslick');
                 },300);
+                $(this).find('.title__ico').removeClass('title__ico_active');
 			}else{
-			$('#slider_hide_04').show('slow');
-			$('.sl_05').slick({
-			dots: true,
-			speed: 300,
-    	});
+				$('#slider_hide_04').show('slow');
+				$('.sl_05').slick({
+					dots: true,
+					speed: 300,
+				});
+                $(this).find('.title__ico').addClass('title__ico_active');
 			}
 		});
         $("iframe#1").attr("src", $("iframe#1").attr("src").replace("autoplay=0", "autoplay=1"));
