@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107187768-1"></script>
+	<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments)};
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-107187768-1');
+	</script>
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-N7LG6ZV');</script>
+		<!-- End Google Tag Manager --><!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-N7LG6ZV');</script>
+		<!-- End Google Tag Manager -->	
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TM Baschynsky</title>
+<meta name="viewport" content="width=device-width;">
+<link rel="stylesheet" href="/css/style.css"/>
+<link rel="stylesheet" href="/css/jquery.fancybox.css"/>
+<link rel="stylesheet" href="/css/slick.css"/>
+<script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.js"></script>
+<script type="text/javascript" src="/js/slick.min.js"></script>
+<script type="text/javascript" src="/js/jquery.formstyler.min.js"></script>
+<script type="text/javascript" src="/js/smooth-scroll.js"></script>
+<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+	$(document).ready(function (){
+		var HeightWindow = 	$(window).height();
+		$('.fancybox_form').fancybox({
+			width		: 402,
+			height		: 350,
+			autoSize	: false,
+		});
+		$('.sl_01').slick();
+		$('select').styler();
+		$(".sl_01").css('height', HeightWindow);
+		smoothScroll.init({
+			speed: 500,
+			offset: 99,
+			easing: 'easeInOutCubic',
+			updateURL: false,
+			callbackBefore: function ( toggle, anchor ) {},
+			callbackAfter: function ( toggle, anchor ) {}
+		});
+		$('.slider_hide').hide();
+        $('#title_01').click(function() {
+            if($('#slider_hide').is(':visible')){
+                $('#slider_hide').hide('slow');
+                setTimeout(function () {
+                    $('.sl_02').slick('unslick');
+                },300);
+                $(this).find('.title__ico').removeClass('title__ico_active');
+            }else{
+                $('#slider_hide').show('slow');
+                $('.sl_02').slick({
+                    dots: true,
+                    speed: 300,
+                });
+                $(this).find('.title__ico').addClass('title__ico_active');
+            }
+        });
+        $('#title_02').click(function() {
+            if($('#slider_hide_02').is(':visible')){
+                $('#slider_hide_02').hide('slow');
+                setTimeout(function () {
+                    $('.sl_03').slick('unslick');
+                },300);
+                $(this).find('.title__ico').removeClass('title__ico_active');
+            }else{
+                $('#slider_hide_02').show('slow');
+                $('.sl_03').slick({
+                    dots: true,
+                    speed: 300,
+                });
+                $(this).find('.title__ico').addClass('title__ico_active');
+            }
+        });
+        $('#title_03').click(function() {
+            if($('#slider_hide_03').is(':visible')){
+                $('#slider_hide_03').hide('slow');
+                $(this).find('.title__ico').removeClass('title__ico_active');
+                setTimeout(function () {
+                    $('.sl_04').slick('unslick');
+                },300);
+            }else{
+                $('#slider_hide_03').show('slow');
+                $('.sl_04').slick({
+                    dots: true,
+                    speed: 300,
+                });
+                $(this).find('.title__ico').addClass('title__ico_active');
+            }
+        });
+        $('#title_04').click(function() {
+            if($('#slider_hide_04').is(':visible')){
+                $('#slider_hide_04').hide('slow');
+                setTimeout(function () {
+                    $('.sl_05').slick('unslick');
+                },300);
+                $(this).find('.title__ico').removeClass('title__ico_active');
+            }else{
+                $('#slider_hide_04').show('slow');
+                $('.sl_05').slick({
+                    dots: true,
+                    speed: 300,
+                });
+                $(this).find('.title__ico').addClass('title__ico_active');
+            }
+        });
+        $("iframe#1").attr("src", $("iframe#1").attr("src").replace("autoplay=0", "autoplay=1"));
+        $(".slick-next").click(function(){
+            try {
+                var current = parseInt($(".slick-active")['0'].dataset.slickIndex);
+                $("iframe#" + current).attr("src", $("iframe#" + current).attr('src').replace("autoplay=1", "autoplay=0"));
+                $("iframe#" + (current + 1)).attr("src", $("iframe#" + (current + 1)).attr("src").replace("autoplay=0", "autoplay=1"));
+            }
+            catch(er){
+                console.log(er);
+            }
+        });
+        $(".slick-prev").click(function(){
+            try {
+                var current = parseInt($(".slick-active")['0'].dataset.slickIndex);
+                if (current == 3)
+                {
+                    $("iframe#"+(current - 2)).attr("src", $("iframe#"+(current - 2)).attr('src').replace("autoplay=1", "autoplay=0"));
+                    $("iframe#"+(current + 1)).attr("src", $("iframe#"+(current + 1)).attr("src").replace("autoplay=0", "autoplay=1"));
+                }
+                else
+                {
+                    $("iframe#"+(current + 2)).attr("src", $("iframe#"+(current + 2)).attr('src').replace("autoplay=1", "autoplay=0"));
+                    $("iframe#"+(current + 1)).attr("src", $("iframe#"+(current + 1)).attr("src").replace("autoplay=0", "autoplay=1"));
+                }
+            }
+            catch(er){
+                console.log(er);
+            }
+        });
+        //$(".show_block").click(function(){
+            //console.log($(this));
+            //console.log($(this).attr('name'));
+            //if (['bl_1', 'bl_2', 'bl_3', 'bl_4'].includes($(this).attr('name')))
+            //{
+            //    $('.slider_all').filter(function() {
+            //        if (($(this).attr('style') == undefined) && (['bl_1', 'bl_2', 'bl_3', 'bl_4'].includes($(this).attr('name'))))
+            //        {
+            //            $(this).attr('style', 'display:none;');
+            //        }
+            //        return $(this).attr('style') == undefined;
+            //    });
+            //}
+        //});
+	});
+	$(window).resize(function(){
+		var HeightWindow = 	$(window).height();
+		$(".sl_01").css('height', HeightWindow);
+	});
+</script>
+
+<style type="text/css">
+	.sl_02 .slick-dots li:nth-child(1) button::after { content: 'Fillings'; }
+	.sl_02 .slick-dots li:nth-child(2) button::after { content: 'Fillings with cheese'; }
+	.sl_02 .slick-dots li:nth-child(3) button::after { content: 'Fillin mini'; }
+	.sl_02 .slick-dots li:nth-child(4) button::after { content: 'Fillin mini with cheese'; }
+	.sl_02 .slick-dots li:nth-child(5) button::after { content: 'Balico'; }
+	.sl_02 .slick-dots li:nth-child(6) button::after { content: 'Sausage with cream'; }
+	
+	.sl_03 .slick-dots li:nth-child(1) button::after { content: 'Fillings'; }
+	.sl_03 .slick-dots li:nth-child(2) button::after { content: 'Balico'; }
+	.sl_03 .slick-dots li:nth-child(3) button::after { content: 'Borodino'; }
+
+	.sl_04 .slick-dots li:nth-child(1) button::after { content: 'Medicinal'; }
+	.sl_04 .slick-dots li:nth-child(2) button::after { content: 'Fyleine'; }
+	.sl_04 .slick-dots li:nth-child(3) button::after { content: 'Olivier'; }
+	.sl_04 .slick-dots li:nth-child(4) button::after { content: 'Olivier'; }
+
+	.sl_05 .slick-dots li:nth-child(1) button::after { content: 'Gourmet Roll'; }
+	.sl_05 .slick-dots li:nth-child(2) button::after { content: 'Paste at home'; }
+	.sl_05 .slick-dots li:nth-child(3) button::after { content: 'Wings Assorted'; }
+	.sl_05 .slick-dots li:nth-child(4) button::after { content: 'Breast Ukrainian'; }
+	.sl_05 .slick-dots li:nth-child(5) button::after { content: 'Bavarian sausages'; }
+	.sl_05 .slick-dots li:nth-child(6) button::after { content: 'Yoghurts sausages'; }
+
+</style>
+
+</head>
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7LG6ZV"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="main">
+		<header>
+			<div class="grid">
+			<a href="/" class="logo">
+				<img src="img/logo.png" height="55px;" alt="#" />
+			</a>
+			<select class="language" name="">
+				<option value="1" onclick="location='/2/'">ua</option>
+				<option value="2" selected="selected" onclick="location='en/'">en</option>
+				<option value="3" onclick="location='ru/'">ru</option>
+			</select>
+			<ul class="menu">
+				<li><a href="#menu01" data-scroll data-options="easing: Linear">video</a></li>
+				<li><a href="#menu02" data-scroll data-options="easing: Linear">Product</a></li>
+				<li><a href="#menu03" data-scroll data-options="easing: Linear">Contacts</a></li>
+			</ul>
+			</div>
+		</header>
+		<div class="sl_01_all" id="menu01">
+			<div class="slider sl_01">
+				<!---
+				<div><iframe width="100%" height="100%" src="https://www.youtube.com/embed/SIXw4_rilrw?rel=0&amp;autoplay=1&amp;controls=0&amp;showinfo=0" frameborder="0"
+				allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+				--->
+				<div><iframe width="100%" id="1" height="100%" src="https://www.youtube.com/embed/yXTqLPKed-Y?rel=0&amp;autoplay=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+				<div><iframe width="100%" id="2" height="100%" src="https://www.youtube.com/embed/qQtux5oVcOU?rel=0&amp;autoplay=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+				<div><iframe width="100%" id="3" height="100%" src="https://www.youtube.com/embed/TzEHqAI-zAI?rel=0&amp;autoplay=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+				<div><iframe width="100%" id="4" height="100%" src="https://www.youtube.com/embed/wbongHORO9s?rel=0&amp;autoplay=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+				<!---
+				<div><img src="img/sl_01.jpg" alt=""></div>
+				--->
+			</div>
+			<a href="#menu02" data-scroll data-options="easing: Linear" class="mouse" style="background-image: url('mouse_en.png')"></a>
+			<ul class="soc">
+				<li><a href="https://www.facebook.com/groups/baschinskiy/" target="_blank" class="fb"></a></li>
+				<li><a href="https://www.instagram.com/Baschinskiy/" target="_blank" class="in"></a></li>
+			</ul>
+		</div>
+		<div class="block_03 bl_1 show_block" name="bl_1" id="menu02">
+			<div class="grid">
+				<div class="title">Our <br> Products</div>
+				<div class="title title_hover" id="title_01">
+					<span class="title__ico"></span>
+					<span class="title__text">sausages</span>
+				</div>
+				<div class="slider_all slider_hide" name="bl_1" id="slider_hide">
+					<div class="slider sl_02">
+						<div><img src="img/sl_02_1.jpg" alt=""><span>Fillings</span></div>
+						<div><img src="img/sl_02_4.jpg" alt=""><span>Fillings with cheese</span></div>
+						<div><img src="img/sl_02_5.jpg" alt=""><span>Fillin mini</span></div>
+						<div><img src="img/sl_02_3.jpg" alt=""><span>Fillin mini with cheese</span></div>
+						<div><img src="img/sl_02_6.jpg" alt=""><span>Balico</span></div>
+						<div><img src="img/sl_02_2.jpg" alt=""><span>Sausage with cream</span></div>
+					</div>
+
+					<a href="#menu04" data-scroll data-options="easing: Linear" class="more">flip further</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="block_03 bl_2 show_block" name="bl_2">
+			<div class="grid">
+				<div class="title title_hover" id="title_02">
+					<span class="title__ico"></span>
+					<span class="title__text">Wieners</span>
+				</div>
+				<div class="slider_all slider_hide" name="bl_2" id="slider_hide_02">
+					<div class="slider sl_03">
+						<div><img src="img/sl_03_1.jpg" alt=""><span>Fillings</span></div>
+						<div><img src="img/sl_03_2.jpg" alt=""><span>Balico</span></div>
+						<div><img src="img/sl_03_3.jpg" alt=""><span>Borodino</span></div>
+						<!--
+						<div><img src="img/sl_03.jpg" alt=""><span>Fillings with cheese</span></div>
+						<div><img src="img/sl_02.jpg" alt=""><span>Balico</span></div>
+						<div><img src="img/sl_03.jpg" alt=""><span>Sausage with cream</span></div>
+						-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="block_03 bl_3 show_block" name="bl_3">
+			<div class="grid">
+				<div class="title title_hover" id="title_03">
+					<span class="title__ico"></span>
+					<span class="title__text">Boiled sausages</span>
+				</div>
+				<div class="slider_all slider_hide" name="bl_3" id="slider_hide_03">
+					<div class="slider sl_04">
+						<div><img src="img/sl_04_1.jpg" alt=""><span>Medicinal</span></div>
+						<div><img src="img/sl_04_2.jpg" alt=""><span>Fyleine</span></div>
+						<div><img src="img/sl_04_3.jpg" alt=""><span>Olivier</span></div>
+						<div><img src="img/sl_04_4.jpg" alt=""><span>Olivier</span></div>
+						<!--
+						<div><img src="img/sl_02.jpg" alt=""><span>Balico</span></div>
+						<div><img src="img/sl_03.jpg" alt=""><span>Sausage with cream</span></div>
+						-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="block_03 bl_4 show_block" name="bl_4">
+			<div class="grid">
+				<div class="title title_hover" id="title_04">
+					<span class="title__ico"></span>
+					<span class="title__text">Delicatessens and more</span>
+				</div>
+				<div class="slider_all slider_hide" name="bl_4" id="slider_hide_04">
+					<div class="slider sl_05">
+						<div><img src="img/gurman_1.png" alt=""><span>Gourmet Roll</span></div>
+						<div><img src="img/sl_05_2.jpg" alt=""><span>Paste at home</span></div>
+						<div><img src="img/krultsia_1.png" alt=""><span>Wings Assorted</span></div>
+						<div><img src="img/grudinka_1.png" alt=""><span>Breast Ukrainian</span></div>
+						<div><img src="img/bavarski_1.png" alt=""><span>Bavarian sausages</span></div>
+						<div><img src="img/egerski_1.png" alt=""><span>Yoghurts sausages</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+	<footer id="menu03">
+		<div class="grid">
+			<button class="button_footer fancybox_form" href="#form">write to us</button>
+			<div class="clearfix"></div>
+			<div class="tel">
+				0-800-50-45-50
+			</div>
+			<a class="logo_footer"><img src="img/logo_footer.png" alt=""></a>
+		</div>
+	</footer>
+  <div id="form" class="popup">
+		<h2>To contact us please fill out the form below</h2>
+		<form action="#">
+			<input type="text" name="fio" placeholder="name and surname" />
+			<input type="tel" name="phone" placeholder="phone" />
+			<input type="email" name="email" placeholder="e-mail" />
+			<textarea name="text" rows="8" cols="80" placeholder="message"></textarea>
+			<div class="clearfix"></div>
+			<button class="button" type="button" onclick="sendMail()">send</button>
+		</form>
+		<h2 id="emailSendResult" style="font-size: 20px; text-align: center; display: none;">Your message has been successfully sent</h2>
+	</div>
+
+	<script type="text/javascript">
+		function sendMail()
+		{
+			$("#emailSendResult").hide();
+			fio = $("form input[name=fio]").val();
+			phone = $("form input[name=phone]").val();
+			email = $("form input[name=email]").val();
+			text = $("form textarea[name=text]").val();
+
+			$.ajax({
+            url: "/sendMail.php",
+            type: "POST",
+            data: "fio="+fio+"&phone="+phone+"&email="+email+"&text="+text,
+            dataType: 'json',
+            success: function(result)
+                     { 
+                         if(result == "email_true") { $("#emailSendResult").fadeIn(300); } else { alert("emailError"); }
+                     } 
+          });
+			
+		}
+	</script>
+</body>
+</html>
