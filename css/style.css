@@ -57,8 +57,11 @@ header { height:70px; position: fixed; top:0; left: 0; width: 100%; background: 
     width: 30px;
     height: 30px;
     margin: 0 10px 0 0;
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
+    transition: -webkit-transform 400ms;
     transition: transform 400ms;
+    transition: transform 400ms, -webkit-transform 400ms;
 }
 .title__ico:after {
     content: '';
@@ -81,13 +84,18 @@ header { height:70px; position: fixed; top:0; left: 0; width: 100%; background: 
     height: 2px;
     background: #fff;
     border-radius: 1px;
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
+    transition: -webkit-transform 400ms;
     transition: transform 400ms;
+    transition: transform 400ms, -webkit-transform 400ms;
 }
 .title__ico_active {
+    -webkit-transform: rotate(0);
     transform: rotate(0);
 }
 .title__ico_active:before {
+    -webkit-transform: rotate(0);
     transform: rotate(0);
 }
 .title.title_hover:hover .title__ico:after, .title.title_hover:hover .title__ico:before {
