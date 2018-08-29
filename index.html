@@ -1,177 +1,12 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<!-- Global Site Tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107187768-1"></script>
-	<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments)};
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-107187768-1');
-	</script>
-
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-N7LG6ZV');</script>
-		<!-- End Google Tag Manager --><!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-N7LG6ZV');</script>
-		<!-- End Google Tag Manager -->	
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>ТМ Бащинський</title>
-<meta name="viewport" content="width=device-width;">
-<link rel="stylesheet" href="css/style.css"/>
-<link rel="stylesheet" href="css/jquery.fancybox.css"/>
-<link rel="stylesheet" href="css/slick.css"/>
-<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/jquery.fancybox.js"></script>
-<script type="text/javascript" src="js/slick.min.js"></script>
-<script type="text/javascript" src="js/jquery.formstyler.min.js"></script>
-<script type="text/javascript" src="js/smooth-scroll.js"></script>
-<!--[if IE]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-<script>
-	$(document).ready(function (){
-		var HeightWindow = 	$(window).height();
-		$('.fancybox_form').fancybox({
-			width		: 402,
-			height		: 350,
-			autoSize	: false,
-		});
-		$('.sl_01').slick();
-		$('select').styler();
-		$(".sl_01").css('height', HeightWindow);
-		smoothScroll.init({
-			speed: 500,
-			offset: 99,
-			easing: 'easeInOutCubic',
-			updateURL: false,
-			callbackBefore: function ( toggle, anchor ) {},
-			callbackAfter: function ( toggle, anchor ) {}
-		});
-		$('.slider_hide').hide();
-		$('#title_01').click(function() {
-			if($('#slider_hide').is(':visible')){
-				$('#slider_hide').hide('slow');
-                setTimeout(function () {
-                    $('.sl_02').slick('unslick');
-                },300);
-                $(this).find('.title__ico').removeClass('title__ico_active');
-			}else{
-				$('#slider_hide').show('slow');
-                $('.sl_02').slick({
-                    dots: true,
-                    speed: 300,
-                });
-                $(this).find('.title__ico').addClass('title__ico_active');
-			}
-		});
-		$('#title_02').click(function() {
-			if($('#slider_hide_02').is(':visible')){
-				$('#slider_hide_02').hide('slow');
-                setTimeout(function () {
-                    $('.sl_03').slick('unslick');
-                },300);
-                $(this).find('.title__ico').removeClass('title__ico_active');
-			}else{
-				$('#slider_hide_02').show('slow');
-				$('.sl_03').slick({
-					dots: true,
-					speed: 300,
-				});
-                $(this).find('.title__ico').addClass('title__ico_active');
-			}
-		});
-		$('#title_03').click(function() {
-			if($('#slider_hide_03').is(':visible')){
-				$('#slider_hide_03').hide('slow');
-                $(this).find('.title__ico').removeClass('title__ico_active');
-                setTimeout(function () {
-                    $('.sl_04').slick('unslick');
-                },300);
-			}else{
-				$('#slider_hide_03').show('slow');
-				$('.sl_04').slick({
-					dots: true,
-					speed: 300,
-				});
-                $(this).find('.title__ico').addClass('title__ico_active');
-			}
-		});
-		$('#title_04').click(function() {
-			if($('#slider_hide_04').is(':visible')){
-				$('#slider_hide_04').hide('slow');
-                setTimeout(function () {
-                    $('.sl_05').slick('unslick');
-                },300);
-                $(this).find('.title__ico').removeClass('title__ico_active');
-			}else{
-				$('#slider_hide_04').show('slow');
-				$('.sl_05').slick({
-					dots: true,
-					speed: 300,
-				});
-                $(this).find('.title__ico').addClass('title__ico_active');
-			}
-		});
-        $("iframe#1").attr("src", $("iframe#1").attr("src").replace("autoplay=0", "autoplay=1"));
-        $(".slick-next").click(function(){
-            try {
-                var current = parseInt($(".slick-active")['0'].dataset.slickIndex);
-                $("iframe#" + current).attr("src", $("iframe#" + current).attr('src').replace("autoplay=1", "autoplay=0"));
-                $("iframe#" + (current + 1)).attr("src", $("iframe#" + (current + 1)).attr("src").replace("autoplay=0", "autoplay=1"));
-            }
-            catch(er){
-                console.log(er);
-            }
-        });
-        $(".slick-prev").click(function(){
-            try {
-                var current = parseInt($(".slick-active")['0'].dataset.slickIndex);
-                if (current == 3)
-                {
-                    $("iframe#"+(current - 2)).attr("src", $("iframe#"+(current - 2)).attr('src').replace("autoplay=1", "autoplay=0"));
-                    $("iframe#"+(current + 1)).attr("src", $("iframe#"+(current + 1)).attr("src").replace("autoplay=0", "autoplay=1"));
-                }
-                else
-                {
-                    $("iframe#"+(current + 2)).attr("src", $("iframe#"+(current + 2)).attr('src').replace("autoplay=1", "autoplay=0"));
-                    $("iframe#"+(current + 1)).attr("src", $("iframe#"+(current + 1)).attr("src").replace("autoplay=0", "autoplay=1"));
-                }
-            }
-            catch(er){
-                console.log(er);
-            }
-        });
-        //$(".show_block").click(function(){
-            //console.log($(this));
-            //console.log($(this).attr('name'));
-            //if (['bl_1', 'bl_2', 'bl_3', 'bl_4'].includes($(this).attr('name')))
-            //{
-            //    $('.slider_all').filter(function() {
-            //        if (($(this).attr('style') == undefined) && (['bl_1', 'bl_2', 'bl_3', 'bl_4'].includes($(this).attr('name'))))
-            //        {
-            //            $(this).attr('style', 'display:none;');
-            //        }
-            //        return $(this).attr('style') == undefined;
-            //    });
-            //}
-        //});
-	});
-	$(window).resize(function(){
-		var HeightWindow = 	$(window).height();
-		$(".sl_01").css('height', HeightWindow);
-	});
-</script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ТМ Бащинський</title>
+	<meta name="viewport" content="width=device-width;">
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/jquery.fancybox.css"/>
+	<link rel="stylesheet" href="css/slick.css"/>
 </head>
 <body>
 	<!-- Google Tag Manager (noscript) -->
@@ -182,19 +17,26 @@
 	<div class="main">
 		<header>
 			<div class="grid">
-			<a href="/" class="logo">
-				<img src="img/logo.png" height="55px;" alt="#" />
-			</a>
-			<select class="language" name="">
-				<option value="1" onclick="location='/2/'"><a href="/2/">ua</a></option>
-				<!-- <option value="2" onclick="location='en/'"><a href="en/">en</a></option> -->
-				<option value="3" onclick="location='ru/'"><a href="ru/">ru</a></option>
-			</select>
-			<ul class="menu">
-				<li><a href="#menu01" data-scroll data-options="easing: Linear">відео</a></li>
-				<li><a href="#menu02" data-scroll data-options="easing: Linear">Продукція</a></li>
-				<li><a href="#menu03" data-scroll data-options="easing: Linear">Контакти</a></li>
-			</ul>
+				<a href="/" class="logo">
+					<img src="img/logo.png" height="55px;" alt="#" />
+				</a>
+
+				<div class="language">
+					<div class="language-sel">
+						<span class="language-sel__text">ua</span>
+					</div>
+					<ul class="language-list">
+						<li class="language-list__item">
+							<a href="/ru/" class="language-link">ru</a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="menu">
+					<li><a href="#menu01" data-scroll data-options="easing: Linear">відео</a></li>
+					<li><a href="#menu02" data-scroll data-options="easing: Linear">Продукція</a></li>
+					<li><a href="#menu03" data-scroll data-options="easing: Linear">Контакти</a></li>
+				</ul>
 			</div>
 		</header>
 		<div class="sl_01_all" id="menu01">
@@ -207,6 +49,7 @@
 				<div><iframe width="100%" id="2" height="100%" src="https://www.youtube.com/embed/qQtux5oVcOU?rel=0&amp;autoplay=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 				<div><iframe width="100%" id="3" height="100%" src="https://www.youtube.com/embed/TzEHqAI-zAI?rel=0&amp;autoplay=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
 				<div><iframe width="100%" id="4" height="100%" src="https://www.youtube.com/embed/wbongHORO9s?rel=0&amp;autoplay=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 				<!---
 				<div><img src="img/sl_01.jpg" alt=""></div>
 				--->
@@ -299,6 +142,43 @@
 		</div>
   </div>
 	<footer id="menu03">
+		<div class="footer__address">
+			<address class="grid address">
+				<div class="address-title">
+					<span class="address-title__text">Адреси магазинів</span>
+				</div>
+				<div class="address-store">
+					<div class="address-store__box">
+						<div class="address-store-title">
+							<span class="address-store-title__text">опт-роздріб</span>
+						</div>
+						<ul class="address-store-list">
+							<li class="address-store-list__item"><span class="address-store-text">м.Костянтинівка, Донецька обл., вул. Мирошніченко, 60, <span class="address-store-text__tel">тел.: 38050 336 11 45</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">с.Софіївська Борщагівка, Києво-Святошинський район, вул. Велика Кільцева, 110а, місце 45, <span class="address-store-text__tel">тел.: 38095 281 60 99</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Київ, вул. Волинська, 34/1, <span class="address-store-text__tel">тел.: 38095 281 60 99</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Черкаси, вул. Благовісна, 244, <span class="address-store-text__tel">тел.: 38050 447 74 29</span></span></li>
+						</ul>
+					</div>
+					<div class="address-store__box">
+						<div class="address-store-title">
+							<span class="address-store-title__text">роздріб</span>
+						</div>
+						<ul class="address-store-list">
+							<li class="address-store-list__item"><span class="address-store-text">м.Костянтинівка, Донецька обл., пл. Перемоги, 8, <span class="address-store-text__tel">тел.: 38050 622 29 51</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Костянтинівка, Донецька обл., вул. Громова, 4, <span class="address-store-text__tel">тел.: 38050 622 29 51</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Костянтинівка, Донецька обл., пр. Ломоносова, 117а, <span class="address-store-text__tel">тел.: 38050 622 29 51</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Київ, пл. Печерська, 1/55, <span class="address-store-text__tel">тел.: 38050 463 15 12</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Київ, пр. Ю.Гагаріна, 3, <span class="address-store-text__tel">тел.: 38050 463 15 12</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Київ, вул. П.Мирного, 10, <span class="address-store-text__tel">тел.: 38050 463 15 12</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Київ, вул. Мурманська, 6, <span class="address-store-text__tel">тел.: 38050 463 15 12</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Київ, вул. Кибальчича, 19в, <span class="address-store-text__tel">тел.: 38050 463 15 12</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Київ, вул. Чорнобильська, 16/80, <span class="address-store-text__tel">тел.: 38050 463 15 12</span></span></li>
+							<li class="address-store-list__item"><span class="address-store-text">м.Черкаси, вул. Чорновола, 33, <span class="address-store-text__tel">тел.: 38050 447 74 29</span></span></li>
+						</ul>
+					</div>
+				</div>
+			</address>
+		</div>
 		<div class="grid">
 			<button class="button_footer fancybox_form" href="#form">написати нам</button>
 			<div class="clearfix"></div>
@@ -308,7 +188,8 @@
 			<a class="logo_footer"><img src="img/logo_footer.png" alt=""></a>
 		</div>
 	</footer>
-  <div id="form" class="popup">
+
+	<div id="form" class="popup">
 		<h2>для зв’язку з нами заповніть форму нище</h2>
 		<form>
 			<input type="text" name="fio" placeholder="прізвище та ім’я" />
@@ -320,6 +201,147 @@
 		</form>
 		<h2 id="emailSendResult" style="font-size: 20px; text-align: center; display: none;">Ваше повідомлення успішно надіслано</h2>
 	</div>
+
+	<script src="/js/jquery-3.2.1.min.js"></script>
+	<script src="/js/jquery.fancybox.js"></script>
+	<script src="/js/slick.min.js"></script>
+	<script src="/js/smooth-scroll.js"></script>
+
+	<script>
+        $(document).ready(function (){
+
+            $('.fancybox_form').fancybox({
+                width		: 402,
+                height		: 350,
+                autoSize	: false,
+            });
+
+            var HeightWindow = 	$(window).height();
+            $(".sl_01").css('height', HeightWindow);
+
+            $('.sl_01').slick();
+
+            smoothScroll.init({
+                speed: 500,
+                offset: 69,
+                easing: 'easeInOutCubic',
+                updateURL: false
+            });
+
+            $('.slider_hide').hide();
+
+            $('#title_01').click(function() {
+                if($('#slider_hide').is(':visible')){
+                    $('#slider_hide').hide('slow');
+                    setTimeout(function () {
+                        $('.sl_02').slick('unslick');
+                    },300);
+                    $(this).find('.title__ico').removeClass('title__ico_active');
+                }else{
+                    $('#slider_hide').show('slow');
+                    $('.sl_02').slick({
+                        dots: true,
+                        speed: 300
+                    });
+                    $(this).find('.title__ico').addClass('title__ico_active');
+                }
+            });
+            $('#title_02').click(function() {
+                if($('#slider_hide_02').is(':visible')){
+                    $('#slider_hide_02').hide('slow');
+                    setTimeout(function () {
+                        $('.sl_03').slick('unslick');
+                    },300);
+                    $(this).find('.title__ico').removeClass('title__ico_active');
+                }else{
+                    $('#slider_hide_02').show('slow');
+                    $('.sl_03').slick({
+                        dots: true,
+                        speed: 300
+                    });
+                    $(this).find('.title__ico').addClass('title__ico_active');
+                }
+            });
+            $('#title_03').click(function() {
+                if($('#slider_hide_03').is(':visible')){
+                    $('#slider_hide_03').hide('slow');
+                    $(this).find('.title__ico').removeClass('title__ico_active');
+                    setTimeout(function () {
+                        $('.sl_04').slick('unslick');
+                    },300);
+                }else{
+                    $('#slider_hide_03').show('slow');
+                    $('.sl_04').slick({
+                        dots: true,
+                        speed: 300
+                    });
+                    $(this).find('.title__ico').addClass('title__ico_active');
+                }
+            });
+            $('#title_04').click(function() {
+                if($('#slider_hide_04').is(':visible')){
+                    $('#slider_hide_04').hide('slow');
+                    setTimeout(function () {
+                        $('.sl_05').slick('unslick');
+                    },300);
+                    $(this).find('.title__ico').removeClass('title__ico_active');
+                }else{
+                    $('#slider_hide_04').show('slow');
+                    $('.sl_05').slick({
+                        dots: true,
+                        speed: 300
+                    });
+                    $(this).find('.title__ico').addClass('title__ico_active');
+                }
+            });
+
+            $("iframe#1").attr("src", $("iframe#1").attr("src").replace("autoplay=0", "autoplay=1"));
+
+            $(".slick-next").click(function(){
+                try {
+                    var current = parseInt($(".slick-active")['0'].dataset.slickIndex);
+                    $("iframe#" + current).attr("src", $("iframe#" + current).attr('src').replace("autoplay=1", "autoplay=0"));
+                    $("iframe#" + (current + 1)).attr("src", $("iframe#" + (current + 1)).attr("src").replace("autoplay=0", "autoplay=1"));
+                }
+                catch(er){
+                    console.log(er);
+                }
+            });
+
+            $(".slick-prev").click(function(){
+                try {
+                    var current = parseInt($(".slick-active")['0'].dataset.slickIndex);
+                    if (current == 3)
+                    {
+                        $("iframe#"+(current - 2)).attr("src", $("iframe#"+(current - 2)).attr('src').replace("autoplay=1", "autoplay=0"));
+                        $("iframe#"+(current + 1)).attr("src", $("iframe#"+(current + 1)).attr("src").replace("autoplay=0", "autoplay=1"));
+                    }
+                    else
+                    {
+                        $("iframe#"+(current + 2)).attr("src", $("iframe#"+(current + 2)).attr('src').replace("autoplay=1", "autoplay=0"));
+                        $("iframe#"+(current + 1)).attr("src", $("iframe#"+(current + 1)).attr("src").replace("autoplay=0", "autoplay=1"));
+                    }
+                }
+                catch(er){
+                    console.log(er);
+                }
+            });
+
+            $('.language').click(function () {
+                $('.language-list').slideToggle(200);
+            });
+
+            $(document).on('click',function (e) {
+				if (!$(e.target).closest('.language').length) {
+                    $('.language-list').slideUp(200);
+				}
+            })
+        });
+        $(window).resize(function(){
+            var HeightWindow = 	$(window).height();
+            $(".sl_01").css('height', HeightWindow);
+        });
+	</script>
 
 	<script type="text/javascript">
 		function sendMail()
@@ -343,5 +365,25 @@
 			
 		}
 	</script>
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107187768-1"></script>
+	<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+        gtag('config', 'UA-107187768-1');
+	</script>
+
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N7LG6ZV');</script>
+	<!-- End Google Tag Manager -->
+
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
 </body>
 </html>
