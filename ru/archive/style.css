@@ -338,8 +338,11 @@ footer .logo_footer { float: right; margin: 20px 0 0;}
     .soc { margin: 0 0 0 -490px;}
 }
 @media screen and ( max-width: 1000px) {
+    .yt-video-wr-img, .yt-video-wr-v,.yt-video-wr-v iframe {
+        height: 100%;
+    }
     .slider_hide { height: 662px; }
-	.grid { width:840px;}
+	.grid { width:90%;}
     .sl_01 { height: 550px !important;}
     .title { font-size: 40px; line-height: 40px; margin: 30px 0 40px;}
     .title_orange { font-size: 40px; line-height: 40px; margin: 0 0 35px;}
@@ -356,8 +359,16 @@ footer .logo_footer { float: right; margin: 20px 0 0;}
 .soc { margin: 0 0 0 -350px;}
 }
 @media screen and ( max-width: 720px) {
+    .soc {
+        left: 5%;
+        margin: 0;
+    }
+    .address-store__box {
+        padding: 0 15px;
+        margin: 0;
+    }
     .slider_hide { height: 400px; }
-	.grid { width:480px;}
+	/*.grid { width:480px;}*/
     header { height: 80px;}
     .logo img { height: 50px;}
     .language { margin: 30px 20px 29px 0;}
@@ -397,4 +408,28 @@ footer .logo_footer { float: right; margin: 20px 0 0;}
     .fancybox-stage .popup textarea { margin:0 0 20px; height: 50px; line-height: 18px; font-size: 14px; }
     .fancybox-stage .popup .button { width: 160px; font-size: 14px; height: 38px; line-height: 36px; background: #e39744; padding: 0;}
 .soc { margin: 0 0 0 -240px;}
+}
+.yt-video {
+    position: relative;
+}
+.yt-video-button {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    background: url(../img/svg/btn-play.svg);
+    background-size: cover;
+    cursor: pointer;
+    z-index: 1;
+}
+
+
+html, body {
+    position: relative;
+    height: 100%;
 }

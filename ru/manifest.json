@@ -1,0 +1,8 @@
+{
+  "version": "1.1.0",
+  "manifest_version": "1.0.0",
+  "short_name": "Bashinskiy React App",
+  "name": "Bashinskiy React App",
+  "start_url": "http://www.bashinskiy.in.ua/ru/",
+  "display": "standalone"
+}
